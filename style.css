@@ -2,3 +2,26 @@ body {
     margin: 0;
     background-color: rgba(128, 128, 128, 0.201);
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+
+.box {
+    height: 500px;
+    width: 500px;
+    background-color: aliceblue;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.smallbox {
+    height: 10px;
+    width: 10px;
+    background-color: green;
+}
