@@ -5,7 +5,7 @@ box.classList.add('box');
 container.appendChild(box);
 
 
-for (i=0; i<256; i++) {
+for (i=0; i<1024; i++) {
     const smallBox = document.createElement('div');
     smallBox.classList.add('smallbox');
     box.appendChild(smallBox);
@@ -13,17 +13,20 @@ for (i=0; i<256; i++) {
 }
 
 
-let numberOfBoxes = 16;
-const smallBoxHeight = 500/numberOfBoxes;
-const smallBoxWidth = 500/numberOfBoxes;
-
-console.log(smallBoxHeight)
 
 
+box.addEventListener('mouseover', (e) => {
+    e.target.style.backgroundColor = 'black';
+});
 
 
 
 
 
+`
+const smallBoxes = document.querySelectorAll('div.container > div.box > div.smallBox');
 
-
+smallBoxes.forEach((smallBox) => {
+    return smallBox
+})
+`

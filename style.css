@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgba(128, 128, 128, 0.201);
+    background-color: rgba(74, 74, 74, 0.059);
 }
 
 .container {
@@ -15,13 +15,19 @@ body {
 .box {
     height: 500px;
     width: 500px;
-    background-color: aliceblue;
+    background-color: rgb(244, 248, 251);
     display: flex;
     flex-basis: auto;
     flex-flow: row wrap;
+    border-radius: 3%;
+    box-shadow: 2px 2px 4px;
 }
 
 .smallbox {
-    height: 31.25px;
-    width: 31.25px;
+    height: 15.625px;
+    width: 15.625px;
+}
+
+.coloured {
+    background-color: brown;
 }
