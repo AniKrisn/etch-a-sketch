@@ -1,8 +1,12 @@
 const container = document.querySelector('.container');
 const box = document.createElement('div');
+const colorBox = document.createElement('div');
 
 box.classList.add('box');
 container.appendChild(box);
+
+colorBox.classList.add('colorbox');
+container.appendChild(colorBox);
 
 
 for (i=0; i<1024; i++) {
@@ -26,7 +30,15 @@ box.addEventListener('mousedown', (e) => {
     };
 });
 
-box.addEventListener("mouseup", () => {
+box.addEventListener('mouseup', () => {
     box.onmousemove = null;
 });
+
+const smallBoxes = document.querySelectorAll('.smallBox');
+const button = document.querySelector(button);
+button.addEventListener('click', () => {
+    alert('works');
+})
+
+// smallBoxes.target.style.backgroundColor = 'rgb(244, 248, 251)';
 
