@@ -14,23 +14,19 @@ for (i=0; i<1024; i++) {
 
 
 
+function draw(e) {
+    e.target.style.backgroundColor = 'black';
+}
 
 box.addEventListener('mousedown', (e) => {
-    e.target.style.backgroundColor = 'black';
+    draw(e);
 
-    box.addEventListener('mousemove', (e) => {
-        e.target.style.backgroundColor = 'black';
-    });
+    box.onmousemove = (e) => {
+        draw(e);
+    };
 });
 
+box.addEventListener("mouseup", () => {
+    box.onmousemove = null;
+});
 
-
-
-
-`
-const smallBoxes = document.querySelectorAll('div.container > div.box > div.smallBox');
-
-smallBoxes.forEach((smallBox) => {
-    return smallBox
-})
-`
