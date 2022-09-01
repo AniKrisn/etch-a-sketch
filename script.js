@@ -35,10 +35,10 @@ box.addEventListener('mouseup', () => {
 });
 
 const smallBoxes = document.querySelectorAll('.smallBox');
-const button = document.querySelector(button);
-button.addEventListener('click', () => {
-    alert('works');
-})
+const button = document.querySelector('button');
 
-// smallBoxes.target.style.backgroundColor = 'rgb(244, 248, 251)';
+
+button.addEventListener('click', () => {
+    return;
+})
 
