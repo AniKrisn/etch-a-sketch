@@ -15,8 +15,12 @@ for (i=0; i<1024; i++) {
 
 
 
-box.addEventListener('mouseover', (e) => {
+box.addEventListener('mousedown', (e) => {
     e.target.style.backgroundColor = 'black';
+
+    box.addEventListener('mousemove', (e) => {
+        e.target.style.backgroundColor = 'black';
+    });
 });
 
 
