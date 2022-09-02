@@ -1,12 +1,16 @@
 const container = document.querySelector('.container');
 const box = document.createElement('div');
-const colorBox = document.createElement('div');
+const colorBox = document.createElement('button');
+
 
 box.classList.add('box');
 container.appendChild(box);
 
 colorBox.classList.add('colorbox');
+colorBox.classList.add('color-input');
 container.appendChild(colorBox);
+
+document.querySelector('.colorbox').setAttribute('data-huebee', '{ "notation": "hex", "saturations": 1, "set-text": "false" }');
 
 
 for (i=0; i<1024; i++) {

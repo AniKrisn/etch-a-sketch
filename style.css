@@ -41,8 +41,8 @@ body {
     height: 6vh;
     width: 6vh;
     border: 1px solid black;
-    transform: translateX(80%);
     border-radius: 50%;
+    transform: translateX(60%);
 }
 
 .resetcolor {
