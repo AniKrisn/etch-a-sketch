@@ -10,20 +10,22 @@ colorBox.classList.add('colorbox');
 colorBox.classList.add('color-input');
 container.appendChild(colorBox);
 
-document.querySelector('.colorbox').setAttribute('data-huebee', '{ "notation": "hex", "saturations": 1, "set-text": "false" }');
+document.querySelector('.colorbox').setAttribute('data-huebee', '{ "notation": "hex", "saturations": 1 }');
 
 
 for (i=0; i<1024; i++) {
     const smallBox = document.createElement('div');
     smallBox.classList.add('smallbox');
     box.appendChild(smallBox);
-
 }
 
 
-
 function draw(e) {
-    e.target.style.backgroundColor = 'black';
+    e.target.style.backgroundColor = 'blue';
+}
+
+function clear(e) {
+    e.target.style.backgroundColor = 'rgb(244, 248, 251)';
 }
 
 box.addEventListener('mousedown', (e) => {
@@ -39,10 +41,17 @@ box.addEventListener('mouseup', () => {
 });
 
 const smallBoxes = document.querySelectorAll('.smallBox');
-const button = document.querySelector('button');
 
 
-button.addEventListener('click', () => {
-    return;
-})
+
+
+
+const resetButton = document.getElementById('btn');
+resetButton.addEventListener('click', () => {
+    smallBoxes.forEach((smallBox) => {
+        clear(smallBox);
+    });
+    console.log('click');
+});
+
 
