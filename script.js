@@ -11,6 +11,8 @@ colorBox.classList.add('color-input');
 container.appendChild(colorBox);
 
 document.querySelector('.colorbox').setAttribute('data-huebee', '{ "notation": "hex", "saturations": 1 }');
+// huebee plugin, lets you choose color & fills the colorbox with chosen color
+
 
 
 for (i=0; i<1024; i++) {
@@ -18,14 +20,12 @@ for (i=0; i<1024; i++) {
     smallBox.classList.add('smallbox');
     box.appendChild(smallBox);
 }
+//static, 32x32 box generation. Need to add variable up to 64x64
+
 
 
 function draw(e) {
-    e.target.style.backgroundColor = 'blue';
-}
-
-function clear(e) {
-    e.target.style.backgroundColor = 'rgb(244, 248, 251)';
+    e.target.style.backgroundColor = 'black';
 }
 
 box.addEventListener('mousedown', (e) => {
@@ -40,12 +40,18 @@ box.addEventListener('mouseup', () => {
     box.onmousemove = null;
 });
 
+//draw works
+
+
+
+
+
+/*
+function clear(e) {
+    e.target.style.backgroundColor = 'rgb(244, 248, 251)';
+}
+
 const smallBoxes = document.querySelectorAll('.smallBox');
-
-
-
-
-
 const resetButton = document.getElementById('btn');
 resetButton.addEventListener('click', () => {
     smallBoxes.forEach((smallBox) => {
@@ -54,4 +60,8 @@ resetButton.addEventListener('click', () => {
     console.log('click');
 });
 
+*/
+
+
+//above doesn't work
 
